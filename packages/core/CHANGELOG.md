@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/pothos-ltd/substantiate/compare/core-v1.0.0...core-v1.0.1) (2023-05-13)
+
+
+### Bug Fixes
+
+* **core:** updated formatting ([1bbe188](https://github.com/pothos-ltd/substantiate/commit/1bbe188df543aa12d2834e9be5e013845616a8ae))
+
 # 1.0.0 (2023-05-13)
 
 
