@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/pothos-ltd/substantiate/compare/core-v1.0.1...core-v1.1.0) (2023-05-13)
+
+
+### Features
+
+* **core:** implement oxide bindings ([50ec0b4](https://github.com/pothos-ltd/substantiate/commit/50ec0b4d01b02ef7304d394ecc3041784ab64df9)), closes [#4](https://github.com/pothos-ltd/substantiate/issues/4)
+
 ## [1.0.1](https://github.com/pothos-ltd/substantiate/compare/core-v1.0.0...core-v1.0.1) (2023-05-13)
 
 
