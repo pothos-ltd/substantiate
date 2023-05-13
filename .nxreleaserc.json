@@ -1,0 +1,8 @@
+{
+  "changelog": true,
+  "npm": true,
+  "github": true,
+  "git": true,
+  "repositoryUrl": "https://github.com/pothos-ltd/substantiate",
+  "branches": ["main", "alpha", "beta"]
+}
