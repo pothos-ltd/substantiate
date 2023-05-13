@@ -1,16 +1,36 @@
 // Dependencies
 import { z } from 'zod';
 
+// Entity
+import { SubstantiatedEntity } from './substantiated.entity';
+
+// Event
+import { Event } from './event.base';
+
+export type BaseEntitySchema = {
+  [key: string]: z.AnyZodObject;
+};
+
 export type BaseStateSchema = z.ZodDiscriminatedUnion<
   'state',
   z.ZodObject<any, any, any>[]
 >;
 
-export type EntityMetadata = {
+export type EntityMetadata<
+  S extends SubstantiatedEntity['_schema'] = SubstantiatedEntity['_schema']
+> = {
   _id: CUID;
   _state: string | number | symbol;
   _name: string;
+  _schema: S;
+  _events: Event[];
+  _mutable: boolean;
 };
+
+export type EntityObject<S, P> = {
+  id: string;
+  state: S;
+} & P;
 
 export type SchemaFromState<
   Schema extends BaseStateSchema,

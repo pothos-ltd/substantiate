@@ -14,6 +14,7 @@ import {
   CONFLICT,
   FIELD_VALIDATION_ERROR,
   INTERNAL_SERVER_ERROR,
+  MUTABLE_EXPORT_EXCEPTION,
   NOT_FOUND,
   VALIDATION_ERROR,
 } from './exception.code';
@@ -69,6 +70,21 @@ export class InternalServerErrorException extends EntityExceptionBase {
   }
 
   readonly code = INTERNAL_SERVER_ERROR;
+}
+
+export class MutableExportException extends EntityExceptionBase {
+  readonly code = MUTABLE_EXPORT_EXCEPTION;
+  static readonly message =
+    'Unable to export a Mutable Entity, please ensure you run .lock() first!';
+
+  constructor(entityMetadata: EntityMetadata) {
+    super(MutableExportException.message, undefined, {
+      id: entityMetadata._id,
+      entity: entityMetadata._name,
+      state: entityMetadata._state,
+      mutable: entityMetadata._mutable,
+    });
+  }
 }
 
 export class ValidationException extends EntityExceptionBase {

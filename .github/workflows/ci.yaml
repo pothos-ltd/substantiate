@@ -13,6 +13,14 @@ env:
   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
 jobs:
+  check-signed-commits:
+    name: Check signed commits in PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Check signed commits in PR
+        uses: 1Password/check-signed-commits-action@v1
   main:
     runs-on: ubuntu-latest
     defaults:

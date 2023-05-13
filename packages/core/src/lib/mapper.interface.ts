@@ -1,6 +1,6 @@
-import { Entity } from './entity.base';
+import { SubstantiatedEntity } from './substantiated.entity';
 
-export interface Mapper<E extends Entity, DbRecord> {
+export interface Mapper<E extends SubstantiatedEntity, DbRecord> {
   toDocument(entity: E): DbRecord;
   toEntity(record: unknown): E;
 }
