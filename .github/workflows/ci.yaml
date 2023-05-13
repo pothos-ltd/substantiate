@@ -118,6 +118,7 @@ jobs:
           fi
       - run: |
           NX_CLOUD_DISTRIBUTED_EXECUTION=false pnpm exec nx run core:build
+          NX_CLOUD_DISTRIBUTED_EXECUTION=false pnpm exec nx run core:test
       - name: Release
         if: ${{ success() && (github.event_name != 'pull_request' || github.event.action == 'closed' && github.event.pull_request.merged == true) }}
         env:
