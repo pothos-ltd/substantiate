@@ -72,11 +72,11 @@ export class InternalServerErrorException extends EntityExceptionBase {
 }
 
 export class ValidationException extends EntityExceptionBase {
+  readonly code = VALIDATION_ERROR;
+
   constructor(error: ValidationError, entityMetadata: EntityMetadata) {
     super(`Error Validating ${entityMetadata._name}`, error);
   }
-
-  readonly code = VALIDATION_ERROR;
 }
 
 export class FieldValidationException extends SubstantiateExceptionBase {
