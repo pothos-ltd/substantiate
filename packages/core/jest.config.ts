@@ -19,11 +19,11 @@ if (swcJestConfig.swcrc === undefined) {
 // swcJestConfig.module.noInterop = false;
 
 export default {
-  displayName: 'ts-library',
+  displayName: 'core',
   preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[tj]s$': ['@swc/jest', swcJestConfig],
   },
-  moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/packages/ts-library',
+  testEnvironment: 'node',
+  moduleFileExtensions: ['ts', 'js'],
 };

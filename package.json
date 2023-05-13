@@ -9,6 +9,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
+    "@inrupt/jest-jsdom-polyfills": "^1.7.0",
     "@nx/eslint-plugin": "16.1.4",
     "@nx/jest": "16.1.4",
     "@nx/js": "^16.1.4",
